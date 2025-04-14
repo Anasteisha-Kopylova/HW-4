@@ -1,8 +1,8 @@
 let num = prompt('Enter a three-digit number');
 
-if (num.length !== 3 || isNaN(num)) {
-    alert('Please enter a valid 3-digit number');
-} else {
+while (!num || num.length !== 3 || isNaN(Number(num))) {
+    num = prompt('Please enter a valid 3-digit number');
+}
     let a = num[0];
     let b = num[1];
     let c = num[2];
@@ -14,6 +14,4 @@ if (num.length !== 3 || isNaN(num)) {
     } else {
         alert('All numbers are different');
     }
-}
-
 
